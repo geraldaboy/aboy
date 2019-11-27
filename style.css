@@ -1,0 +1,127 @@
+
+
+/* HEADER */
+.site-header {
+}
+.site-header h1 {
+	color: #767676;
+	margin: 0;
+	font-size: 28px;
+	text-align: center;
+	text-shadow: #dcdcdc 0px 1px 0px;
+}
+.site-header h2 {
+	color: #767676;
+	margin: 0;
+	font-size: 14px;
+	font-weight: 400;
+	font-style: italic;
+	text-align: center;
+	text-shadow: #dcdcdc 0px 1px 0px;
+}
+.main-menu {
+	margin-top: 15px;
+	text-align: center;
+	color: #B8860B;
+}
+
+.main-menu a {
+	margin-right: 9px;
+	color: #0dbbdb;
+	font-size: 14px;
+}
+.main-menu a :active {
+	
+	color: #0dbbdb;
+}
+.main-menu a:hover {
+	color:#fff;
+	background-color:none;
+	border-color:#777;
+	
+	
+}
+
+
+.login:before,
+.package:before,
+.coverage:before
+.android:before
+.laptop:before,
+.contact:before,
+.status:before {
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	text-decoration: inherit;
+	vertical-align: text-bottom;
+}
+.login:before {
+	content: "\f427";
+	margin: 0 1px 0 0;
+	font: normal 16px/1 Genericons;
+}
+.voucher:before {
+	content: "\f413";
+	font: normal 16px/1 Genericons;
+}
+.service:before {
+	content: "\f308";
+	font: normal 16px/1 Genericons;
+}
+.spaceiklan:before {
+	content: "\f109";
+	font: normal 16px/1 Genericons;
+}
+.policy:before {
+	content: "\f424";
+	margin: -2px 1px 2px 0;
+	font: normal 16px/1 Genericons;
+}
+.contact:before {
+	content: "\f454";
+	margin: -2px 1px 2px 0;
+	font: normal 16px/1 Genericons;
+}
+.status:before {
+	content: "\f304";
+	margin: 0 1px 0 0;
+	font: normal 16px/1 Genericons;
+}
+
+.table,.table2{
+	width:100%;
+	border-collapse:collapse!
+important}.notice{
+	background-color:#fff8e1;
+	border-radius:3px;
+	padding:5px;
+	margin-bottom:10px;
+    font-size:14px;
+    color:#000}
+.table td,
+.table th{
+	padding:5px;
+    border:1px solid #f2f2f2!
+important;
+    color:#FFF}
+.table td,a,th{
+	color:#f3f4f5;
+    text-decoration:none}
+.table2{
+	background-color:#E6E6FA;
+	text-align:left}
+.table2 td,
+.table2 th{
+	padding:4px;
+	padding-left:10px;
+	border:1px solid #999!
+important}
+.table2 td,a,th{
+	color:#444;
+	text-decoration:none}@media screen and (max-width:600px){
+.main{
+	width:90%;
+	margin-top:10%}}@media screen and (min-width:600px){
+.main{
+	margin-top:2%}}
+

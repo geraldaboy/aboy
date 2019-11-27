@@ -1,0 +1,104 @@
+# This file contains error messages which are shown to user, when http/https
+# login is used.
+# These messages can be changed to make user interface more friendly, including
+# translations to different languages.
+#
+# Various variables can be used here as well. Most frequently used ones are:
+#	$(error-orig)	- original error message from hotspot
+#	$(ip)		- ip address of a client
+#	$(username)	- username of client trying to log in
+
+# internal-error
+# It should never happen. If it will, error page will be shown
+# displaying this error message (error-orig will describe what has happened)
+
+internal-error = internal error ($(error-orig))
+
+# config-error
+# Should never happen if hotspot is configured properly.
+
+config-error = configuration error ($(error-orig))
+
+# not-logged-in
+# Will happen, if status or logout page is requested by user,
+# which actually is not logged in
+
+not-logged-in = you are not logged in (ip $(ip))
+
+# ippool-empty
+# IP address for user is to be assigned from ip pool, but there are no more
+# addresses in that pool
+
+ippool-empty = cannot assign ip address - no more free addresses from pool
+
+# shutting-down
+# When shutdown is executed, new clients are not accepted
+
+shutting-down = hotspot service is shutting down
+
+# user-session-limit
+# If user profile has limit of shared-users, then this error will be shown
+# after reaching this limit
+
+user-session-limit = Opps pasinya na po according to the package you availed you already excceded the max device allowed to use for account " $(username) " Please disconnect or logout one of your active device to be able to use your account for this device otherwise request to system admin for additional device access if you transfered your connection to other wifi ssid please try again after for 2 min .
+
+# license-session-limit
+# Depending on licence number of active hotspot clients is limited to
+# one or another amount. If this limit is reached, following error is displayed.
+
+license-session-limit = session limit reached ($(error-orig))
+
+# wrong-mac-username
+# If username looks like MAC address (12:34:56:78:9a:bc), but is not
+# a MAC address of this client, login is rejected
+
+wrong-mac-username = AGOY DILI PWEDI INDAY/DODONG PAG PALIT NALANG VOUCHER ($(username)): IS NOT ALLOWED ON THIS WIFI NAME
+
+# chap-missing
+# If http-chap login method is used, but hotspot program does not receive
+# back encrypted password, this error message is shown.
+# Possible reasons of failure:
+#	- JavaScript is not enabled in web browser;
+#	- login.html page is not valid;
+#	- challenge value has expired on server (more than 1h of inactivity);
+#	- http-chap login method is recently removed;
+# If JavaScript is enabled and login.html page is valid,
+# then retrying to login usually fixes this problem.
+
+chap-missing = web browser did not send challenge response (try again, enable JavaScript)
+
+# invalid-username
+# Most general case of invalid username or password. If RADIUS server
+# has sent an error string with Access-Reject message, then it will
+# override this setting.
+
+invalid-username = User (  $(username) ) not valid please double check posible reason No. 1, Typographical error betwen "0 zero" and "letter O" please try booth note code on vendo screen are all Capital. No. 2, Voucher are already EXPIRED / CONSUMED ,kung tama naman try to use "chrome"browser to access this page type 10.5.50.1 or http://aboy.wifi kung ayaw parin ask the owner if may tao,pag wala take picture of your code on screen of vendo and sent to our support fb page aboynetworks para ma verify at ma refund no records no refund,Please note hacking attempt,multiple input of wrong code will result to banned your device to use our service permanently "parang kayu ng x mo ginawa mo ng lahat di talaga nag work" 
+
+# invalid-mac
+# Local users (on hotspot server) can be bound to some MAC address. If login
+# from different MAC is tried, this error message will be shown.
+
+invalid-mac = Bawal ka dito $(username) Pasinsya na mag request ka nalang ng transfer
+
+# uptime-limit, traffic-limit
+# For local hotspot users in case if limits are reached
+
+uptime-limit = Hi! $(username) parang yung x mo nag expired na pag mamahal sayu bili na ng bago life must go on salamat po 
+traffic-limit = user $(username) Na consume niyo na po ang allocated data base on your voucher please use unlimited voucher para di ma bitin salamat po.
+
+# radius-timeout
+# User is authenticated by RADIUS server, but no response is received from it,
+# following error will be shown.
+
+radius-timeout = RADIUS server is not responding
+
+# auth-in-progress
+# Authorization in progress. Client already has issued an authorization request
+# which is not yet complete.
+
+auth-in-progress = Warning! Multiple fail login detected, wag mo madaliin yan tuloy nag sawa siya sayu
+
+# radius-reply
+# Radius server returned some custom error message
+
+radius-reply = $(error-orig)
